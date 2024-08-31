@@ -1,0 +1,25 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+int main() {
+	//write logic here
+	int t;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	unordered_map<int,int>freq;
+	int n;
+	cin>>n;
+	int a[n];
+	for(int i=0;i<n;i++){
+		cin>>a[i];
+		freq[a[i]]++;
+	}
+	int high=1;
+	for(auto x:freq){
+		if(x.second>high){
+			high=x.second;
+		}
+	}
+	cout<<n-high<<endl;
+}
+}
