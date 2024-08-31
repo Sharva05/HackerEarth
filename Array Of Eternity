@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+	//write code to read the input and print the output
+	int n;
+	cin>>n;
+	if(n==0){
+		cout<< 0;
+		return 0;
+		}
+	int a[n];
+	a[0]=0;
+	a[1]=1;
+	int great=1;
+	for(int i=1;i<n;i++){
+		int idx=2*i;
+		if(idx>n)
+			break;
+		a[idx]=a[i];
+		if((idx+1)>n){
+			break;
+		}
+		a[idx+1]=a[i]+a[i+1];
+		great=max(great,a[idx+1]);
+	}
+	cout<<great;
+	return 0;
+}
