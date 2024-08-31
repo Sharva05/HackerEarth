@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+//Write yout logic here
+    int n;
+    cin>>n;
+    int nums[n],ans[n],mul=1;
+    for(int i=0;i<n;i++){
+        cin>>nums[i];
+        mul*=nums[i];
+        }
+    for(int i=0;i<n;i++){
+        ans[i]=mul/nums[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<ans[i]<<" ";
+    }
+    
+    return 0;
+}
