@@ -1,0 +1,24 @@
+#include <iostream>
+#include<vector> 
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int num;
+	cin >> num;    //Reading input from STDIN
+	//cout << "Input number is " << num << endl;	// Writing output to STDOUT
+	vector<int>a(num);
+	for(int i=0;i<num;i++){
+		cin>>a[i];
+	}
+	vector<int>b(a.begin(),a.end());
+	sort(b.begin(),b.end());
+	for(int i:a){
+		for(int j=1;j<=num;j++){
+			if(b[j-1]==i){
+				cout<<j<<" ";
+				break;
+			}
+		}
+	}
+	return 0;
+}
